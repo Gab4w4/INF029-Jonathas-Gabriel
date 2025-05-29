@@ -40,7 +40,6 @@ void jogar() {
 
 void computador() {
     int l,c;
-    // Tenta ganhar ou bloquear
     for(l=0;l<3;l++) for(c=0;c<3;c++) 
         if(tab[l][c]==' ') {
             tab[l][c]=j;
@@ -51,7 +50,6 @@ void computador() {
             if(ganhou(j=='X'?'O':'X')) { tab[l][c]=j; return; }
             tab[l][c]=' ';
         }
-    // Jogada aleatória
     do { l=rand()%3; c=rand()%3; } while(tab[l][c]!=' ');
     tab[l][c]=j;
 }
